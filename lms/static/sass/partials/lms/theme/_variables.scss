@@ -1,0 +1,97 @@
+// =========================================================
+// A Happy Theme Variables
+// Navy blue professional edtech theme for ahappy.net
+// =========================================================
+
+// Brand colors
+$primary: #1E3A5F;
+$primary-hover: #2A4F7F;
+$primary-accent: #3B82F6;
+$primary-light: #EFF6FF;
+$primary-foreground: #FFFFFF;
+
+// Neutral palette
+$dark: #0F172A;
+$dark-2: #111827;
+$dark-3: #1F2937;
+$gray-700: #374151;
+$gray-600: #4B5563;
+$gray-500: #6B7280;
+$gray-400: #9CA3AF;
+$gray-300: #D1D5DB;
+$gray-200: #E5E7EB;
+$gray-100: #F3F4F6;
+$white: #FFFFFF;
+
+// Typography
+$font-family-title: 'Inter', sans-serif;
+$f-sans-serif: 'Inter', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: 'Crimson Text', Georgia, serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+
+// Initialize the Open edX Bootstrap theme
+@import 'edx-bootstrap/sass/open-edx/theme';
+
+// =========================================================
+// Custom theme tokens
+// =========================================================
+
+// Layout
+$big-screen: 1200px;
+$container-max-width: 1280px;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+
+// Light theme text + surfaces
+$text-color-primary: #111827;
+$text-color-secondary: #4B5563;
+$text-color-muted: #6B7280;
+$border-color: #E5E7EB;
+$surface-bg: #FFFFFF;
+$surface-muted: #F9FAFB;
+
+// States
+$success: #16A34A;
+$danger: #DC2626;
+$warning-400: #FFE340;
+$warning-700: #9C4607;
+$warning-accent-700: #FFFCF5;
+
+// =========================================================
+// Dark theme tokens
+// =========================================================
+
+$primary-d: #93C5FD;
+$primary-light-d: #1F2937;
+$text-color-d: #F8FAFC;
+$text-color-secondary-d: #CBD5E1;
+$text-color-muted-d: #94A3B8;
+$border-color-d: rgba(255, 255, 255, 0.12);
+$surface-bg-d: #0D0D0E;
+$surface-card-d: #111827;
+$surface-card-alt-d: #1F2937;
+$light-overlay-d: #36383B;
+$danger-d: #FFA07A;
+$success-d: #54CF5E;
+$btn-color-d: #1E3A5F;
+$light-theme-switch-bg-color: #1E3A5F;
+$dark-theme-switch-bg-color: #717D8A;
+
+// Inputs
+$instructor-input-border-color: $gray-300;
+
+// Motion
+$page-color-transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+
+// =========================================================
+// Legacy variable aliases
+// (used throughout _extras.scss and component SCSS files)
+// =========================================================
+$body-bg-d: $surface-bg-d;
+$gray-light: $gray-200;
+$gray-lighter: #c8c8c8;
+$light-dark: $gray-700;
+$light-dark-d: #374151;
