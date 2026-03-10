@@ -1,0 +1,43 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Privacy Policy / Chính sách Bảo mật")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("A Happy is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information.")}
+      </p>
+      <p>
+        ${_("A Happy cam kết bảo vệ quyền riêng tư của bạn. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân.")}
+      </p>
+
+      <h2>${_("Information We Collect / Thông tin chúng tôi thu thập")}</h2>
+      <p>
+        ${_("We collect information you provide when creating an account (name, email, profile details) and data about your learning activity to improve your experience.")}
+      </p>
+
+      <h2>${_("How We Use Your Information / Cách sử dụng thông tin")}</h2>
+      <p>
+        ${_("Your information is used to personalize your learning experience, provide customer support, issue certificates, and improve our platform.")}
+      </p>
+
+      <h2>${_("Data Protection / Bảo vệ dữ liệu")}</h2>
+      <p>
+        ${_("We use industry-standard security measures to protect your data. We do not sell your personal information to third parties.")}
+      </p>
+
+      <h2>${_("Contact / Liên hệ")}</h2>
+      <p>
+        ${_("For privacy-related questions, email us at")} <a href="mailto:privacy@ahappy.net">privacy@ahappy.net</a>
+      </p>
+    </div>
+  </section>
+</main>

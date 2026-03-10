@@ -1,0 +1,62 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Help")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Help Center / Trung tâm Hỗ trợ")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("We're here to support your learning journey. Find answers to common questions below.")}
+      </p>
+      <p>
+        ${_("Chúng tôi luôn đồng hành cùng hành trình học tập của bạn. Xem các câu hỏi thường gặp bên dưới.")}
+      </p>
+
+      <h2>${_("Getting Started / Bắt đầu")}</h2>
+      <p>
+        ${_("New to A Happy? Start by browsing available courses, create your account, and enroll in any course that interests you. It's free to sign up!")}
+      </p>
+      <p>
+        ${_("Mới đến A Happy? Hãy bắt đầu bằng cách khám phá các khóa học, tạo tài khoản và đăng ký khóa học bạn quan tâm. Hoàn toàn miễn phí!")}
+      </p>
+
+      <h2>${_("Frequently Asked Questions / Câu hỏi thường gặp")}</h2>
+
+      <h3>${_("How do I create an account? / Làm thế nào để tạo tài khoản?")}</h3>
+      <p>
+        ${_("Click the 'Sign Up' button at the top of the page and fill in your information. You can also sign up using your Google or social media accounts.")}
+      </p>
+      <p>
+        ${_("Nhấn nút 'Đăng ký' ở đầu trang và điền thông tin. Bạn cũng có thể đăng ký bằng tài khoản Google hoặc mạng xã hội.")}
+      </p>
+
+      <h3>${_("How do I enroll in a course? / Làm sao để đăng ký khóa học?")}</h3>
+      <p>
+        ${_("Browse the course catalog, click on a course you like, and press 'Enroll'. Some courses are free while others may require payment.")}
+      </p>
+      <p>
+        ${_("Duyệt danh mục khóa học, chọn khóa học bạn thích và nhấn 'Đăng ký'. Một số khóa học miễn phí, một số có thể yêu cầu thanh toán.")}
+      </p>
+
+      <h3>${_("How do I get a certificate? / Làm sao để nhận chứng chỉ?")}</h3>
+      <p>
+        ${_("Complete all required course activities and achieve the minimum passing grade. Your certificate will be available in your Dashboard.")}
+      </p>
+      <p>
+        ${_("Hoàn thành tất cả hoạt động bắt buộc và đạt điểm tối thiểu. Chứng chỉ sẽ có trong trang Dashboard của bạn.")}
+      </p>
+
+      <h2>${_("Need More Help? / Cần hỗ trợ thêm?")}</h2>
+      <p>
+        ${_("Contact us at")} <a href="mailto:support@ahappy.net">support@ahappy.net</a>
+      </p>
+    </div>
+  </section>
+</main>

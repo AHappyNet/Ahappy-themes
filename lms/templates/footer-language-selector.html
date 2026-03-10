@@ -1,0 +1,71 @@
+<%page expression_filter="h"/>
+<%!
+  from django.utils.translation import gettext as _
+  from django.urls import reverse
+  from openedx.core.djangoapps.lang_pref.api import released_languages
+%>
+<%namespace name="static" file="static_content.html"/>
+
+<%
+  languages = released_languages()
+%>
+
+% if len(languages) > 1:
+<div class="footer-language-picker" role="navigation" aria-label="${_('Language selector')}">
+  <form action="/i18n/setlang/" method="post" class="footer-lang-form" id="footer-language-form">
+    <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}"/>
+
+    % if user.is_authenticated:
+      <input
+        type="hidden"
+        class="url-endpoint"
+        value="${reverse('preferences_api', kwargs={'username': user.username})}"
+        data-user-is-authenticated="true"
+      />
+    % else:
+      <input
+        type="hidden"
+        class="url-endpoint"
+        value="${reverse('update_language')}"
+        data-user-is-authenticated="false"
+      />
+    % endif
+
+    <label for="footer-lang-select" class="language-picker-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span class="sr-only">${_("Choose language")}</span>
+    </label>
+    <select
+      id="footer-lang-select"
+      name="language"
+      class="language-picker-select"
+      aria-label="${_('Choose language')}"
+    >
+      % for lang_code, lang_name in languages:
+        % if lang_code == LANGUAGE_CODE:
+          <option value="${lang_code}" selected="selected">${lang_name}</option>
+        % else:
+          <option value="${lang_code}">${lang_name}</option>
+        % endif
+      % endfor
+    </select>
+  </form>
+</div>
+
+<script>
+  (function() {
+    var select = document.getElementById('footer-lang-select');
+    if (select) {
+      select.addEventListener('change', function() {
+        var form = document.getElementById('footer-language-form');
+        if (form) {
+          form.submit();
+        }
+      });
+    }
+  })();
+</script>
+% endif

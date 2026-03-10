@@ -1,0 +1,43 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Terms of Service / Điều khoản Sử dụng")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("By using A Happy (ahappy.net), you agree to the following terms. Please read them carefully.")}
+      </p>
+      <p>
+        ${_("Khi sử dụng A Happy (ahappy.net), bạn đồng ý với các điều khoản sau. Vui lòng đọc kỹ.")}
+      </p>
+
+      <h2>${_("User Accounts / Tài khoản Người dùng")}</h2>
+      <p>
+        ${_("You must provide accurate information when creating an account. You are responsible for maintaining the security of your account.")}
+      </p>
+
+      <h2>${_("Course Content / Nội dung Khóa học")}</h2>
+      <p>
+        ${_("All course materials are protected by copyright. You may not distribute, copy, or reproduce course content without permission.")}
+      </p>
+
+      <h2>${_("Code of Conduct / Quy tắc Ứng xử")}</h2>
+      <p>
+        ${_("Users must be respectful in all interactions. Harassment, cheating, and sharing of inappropriate content are strictly prohibited.")}
+      </p>
+
+      <h2>${_("Changes / Thay đổi")}</h2>
+      <p>
+        ${_("A Happy reserves the right to update these terms. We will notify users of significant changes via email.")}
+      </p>
+    </div>
+  </section>
+</main>

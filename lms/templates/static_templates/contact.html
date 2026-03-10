@@ -1,0 +1,43 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Contact Us")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Contact Us / Liên hệ")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("We'd love to hear from you! Whether you have a question about courses, need technical support, or want to collaborate — our team is ready to help.")}
+      </p>
+      <p>
+        ${_("Chúng tôi luôn sẵn sàng lắng nghe bạn! Dù bạn có câu hỏi về khóa học, cần hỗ trợ kỹ thuật hay muốn hợp tác — đội ngũ của chúng tôi luôn sẵn lòng giúp đỡ.")}
+      </p>
+
+      <h2>${_("Get in Touch / Thông tin liên hệ")}</h2>
+      <ul>
+        <li><strong>${_("Email")}:</strong> support@ahappy.net</li>
+        <li><strong>${_("Website")}:</strong> <a href="https://ahappy.net">https://ahappy.net</a></li>
+      </ul>
+
+      <h2>${_("Support Hours / Giờ hỗ trợ")}</h2>
+      <p>
+        ${_("Monday – Friday: 8:00 AM – 6:00 PM (GMT+7)")}<br/>
+        ${_("Thứ Hai – Thứ Sáu: 8:00 – 18:00 (Giờ Việt Nam)")}
+      </p>
+
+      <h2>${_("Feedback / Góp ý")}</h2>
+      <p>
+        ${_("Your feedback helps us improve. Please email us at")} <a href="mailto:feedback@ahappy.net">feedback@ahappy.net</a>.
+      </p>
+      <p>
+        ${_("Mọi góp ý của bạn giúp chúng tôi hoàn thiện hơn. Vui lòng gửi email đến")} <a href="mailto:feedback@ahappy.net">feedback@ahappy.net</a>.
+      </p>
+    </div>
+  </section>
+</main>

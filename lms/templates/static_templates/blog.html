@@ -1,0 +1,23 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Blog")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Blog / Bài viết")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("Stay tuned! Our blog is coming soon with learning tips, education news, and student success stories.")}
+      </p>
+      <p>
+        ${_("Hãy đón chờ! Blog sắp ra mắt với các mẹo học tập, tin tức giáo dục và câu chuyện thành công của học viên.")}
+      </p>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,26 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("Support Us")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${_("Support A Happy / Ủng hộ A Happy")}</h1>
+
+    <div class="static-page-content">
+      <p>
+        ${_("A Happy is committed to making quality education accessible for everyone. Your support helps us create more courses and reach more students.")}
+      </p>
+      <p>
+        ${_("A Happy cam kết mang giáo dục chất lượng đến với mọi người. Sự ủng hộ của bạn giúp chúng tôi tạo thêm khóa học và tiếp cận nhiều học viên hơn.")}
+      </p>
+      <p>
+        ${_("For partnership or sponsorship inquiries, please contact")} <a href="mailto:support@ahappy.net">support@ahappy.net</a>
+      </p>
+    </div>
+  </section>
+</main>

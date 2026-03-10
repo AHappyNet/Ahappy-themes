@@ -1,0 +1,44 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%namespace name="static" file="../static_content.html"/>
+<%!
+from django.utils.translation import gettext as _
+%>
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<%
+    about_title = page_header or _("About A Happy")
+%>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about static-page-container">
+    <h1 class="page-heading">${about_title}</h1>
+
+    <div class="static-page-content">
+      <h2>${_("Our Mission")}</h2>
+      <p>
+        ${_("A Happy is an online learning platform dedicated to students and learners of all ages. We believe that education should be accessible, engaging, and effective — empowering every learner to achieve their potential.")}
+      </p>
+      <p>
+        ${_("A Happy là nền tảng học trực tuyến dành cho học sinh và sinh viên. Chúng tôi tin rằng giáo dục cần dễ tiếp cận, hấp dẫn và hiệu quả — giúp mỗi người học phát huy tối đa tiềm năng của mình.")}
+      </p>
+
+      <h2>${_("What We Offer")}</h2>
+      <p>
+        ${_("Our platform provides high-quality courses across a wide range of subjects, from academics to practical skills. With interactive content, progress tracking, and certification, A Happy supports your entire learning journey.")}
+      </p>
+      <p>
+        ${_("Nền tảng cung cấp các khóa học chất lượng cao trên nhiều lĩnh vực, từ kiến thức học thuật đến kỹ năng thực tế. Với nội dung tương tác, theo dõi tiến độ và chứng nhận, A Happy đồng hành cùng bạn trên hành trình học tập.")}
+      </p>
+
+      <h2>${_("Why A Happy?")}</h2>
+      <ul>
+        <li>${_("Free and premium courses designed by experienced educators / Khóa học miễn phí và cao cấp do đội ngũ giảng viên giàu kinh nghiệm thiết kế")}</li>
+        <li>${_("Learn anytime, anywhere on any device / Học mọi lúc, mọi nơi trên mọi thiết bị")}</li>
+        <li>${_("Bilingual support: Vietnamese & English / Hỗ trợ song ngữ Việt - Anh")}</li>
+        <li>${_("Earn certificates to advance your career / Nhận chứng chỉ để phát triển sự nghiệp")}</li>
+      </ul>
+    </div>
+  </section>
+</main>
